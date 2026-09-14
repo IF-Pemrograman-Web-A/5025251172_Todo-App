@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Todo App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Todo List</h1>
+        </header>
+
+        <main>
+
+            <section class="todo-list">
+                <h2>Tasks</h2>
+
+                <div class="todo-item">
+                    <h3>Tugas 1 Pemrograman Web</h3>
+                    <p>Create a Todo List Webpage</p>
+                    <span class="in-progress">In Progress</span>
+                </div>
+
+                <div class="todo-item">
+                    <h3>Tugas 2 KKA</h3>
+                    <p>8-Puzzle</p>
+                    <span class="done">Done</span>
+                </div>
+
+                <div class="todo-item">
+                    <h3>Tugas 1 Matematika Diskrit</h3>
+                    <p>Book: Discrete Mathematics and Its Applications, Kenneth H Rossen 7th</p>
+                    <span class="pending">Pending</span>
+                </div>
+
+            </section>
+
+            <section class="todo-detail">
+                <h2>Todo Detail</h2>
+                <label>Title</label>
+                <input type="text" value="Tugas 1 Pemrograman Web">
+                <label>Description</label>
+                <textarea>Create a Todo List Webpage</textarea>
+                <label>Due Date</label>
+                <input type="datetime-local" value="2026-09-14T20:00">
+                <label>Status</label>
+
+                <select>
+                    <option>Pending</option>
+                    <option>In Progress</option>
+                    <option>Done</option>
+                </select>
+
+                <button type="button">Save Changes</button>
+            </section>
+
+        </main>
+
+        <aside>
+            <h2>Create New Todo</h2>
+
+            <form>
+                <label>Title</label>
+                <input type="text">
+                <label>Description</label>
+                <textarea></textarea>
+                <label>Due Date</label>
+                <input type="datetime-local">
+                <button type="submit">Add Todo</button>
+            </form>
+        </aside>
+
+        <footer>
+            <p>[E01a] The Style Warrior</p>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.todo-list {
+    flex: 1;
+}
+
+.todo-detail {
+    flex: 1;
+}
+
+.pending {
+    color: red;
+}
+
+.in-progress {
+    color: orange;
+}
+
+.done {
+    color: green;
+}
+
+.todo-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.todo-item h3 {
+    margin-top: 0;
+}
+
+.todo-item p {
+    margin-bottom: 10px;
+}
+
+.todo-item span {
+    font-weight: bold;
+}
+
+.todo-detail {
+    padding: 15px;
+}
+
+.todo-detail label,
+form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-detail input,
+.todo-detail textarea,
+.todo-detail select,
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.todo-detail textarea,
+form textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 15px;
+}
+
+aside {
+    padding: 20px;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+aside input,
+aside textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+aside textarea {
+    height: 100px;
+}
+
+aside button {
+    margin-top: 15px;
+    padding: 8px 15px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
