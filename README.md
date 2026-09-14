@@ -9,9 +9,9 @@ NRP: 5025251172
 ## Preview
 - Dekstop
   
-  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f442a3bf-19ed-4571-afb0-3509616121f8" />
+  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/58f77ef8-de50-4b7e-80ec-66f9007bc2d3" />
 
 
 - Mobile
   
-  <img width="786" height="3328" alt="IMG_5524 JPG" src="https://github.com/user-attachments/assets/89678a97-ba87-42e2-80ab-bd2061cae553" />
+  <img width="786" height="3328" alt="IMG_5524 JPG" src="https://github.com/user-attachments/assets/303e154d-65b8-44d0-9167-c1b9382d8c3f" />
