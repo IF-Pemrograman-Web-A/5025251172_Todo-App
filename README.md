@@ -1,7 +1,5 @@
 # 5025251172_Todo-App
 
-# 5025251172_Todo-App
-
 Nama: Zainab Ammar Zahra <br>
 NRP: 5025251172
 
