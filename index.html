@@ -1,82 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>Todo App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
+<body>
+
+    <div class="app">
 
         <header>
             <h1>Todo List</h1>
+
+            <button
+                id="themeButton"
+                class="theme-button"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                    ></circle>
+
+                    <line
+                        x1="12"
+                        y1="2"
+                        x2="12"
+                        y2="5"
+                    ></line>
+
+                    <line
+                        x1="12"
+                        y1="19"
+                        x2="12"
+                        y2="22"
+                    ></line>
+
+                    <line
+                        x1="2"
+                        y1="12"
+                        x2="5"
+                        y2="12"
+                    ></line>
+
+                    <line
+                        x1="19"
+                        y1="12"
+                        x2="22"
+                        y2="12"
+                    ></line>
+
+                    <line
+                        x1="4.9"
+                        y1="4.9"
+                        x2="7"
+                        y2="7"
+                    ></line>
+
+                    <line
+                        x1="17"
+                        y1="7"
+                        x2="19.1"
+                        y2="4.9"
+                    ></line>
+
+                    <line
+                        x1="17"
+                        y1="17"
+                        x2="19.1"
+                        y2="19.1"
+                    ></line>
+
+                    <line
+                        x1="4.9"
+                        y1="19.1"
+                        x2="7"
+                        y2="17"
+                    ></line>
+
+                </svg>
+
+            </button>
+
         </header>
+
 
         <main>
 
-            <section class="todo-list">
+            <!-- TASKS -->
+            <section class="tasks-section">
+
                 <h2>Tasks</h2>
 
-                <div class="todo-item">
-                    <h3>Tugas 1 Pemrograman Web</h3>
-                    <p>Create a Todo List Webpage</p>
-                    <span class="in-progress">In Progress</span>
-                </div>
-
-                <div class="todo-item">
-                    <h3>Tugas 2 KKA</h3>
-                    <p>8-Puzzle</p>
-                    <span class="done">Done</span>
-                </div>
-
-                <div class="todo-item">
-                    <h3>Tugas 1 Matematika Diskrit</h3>
-                    <p>Book: Discrete Mathematics and Its Applications, Kenneth H Rossen 7th</p>
-                    <span class="pending">Pending</span>
-                </div>
+                <div
+                    id="todoContainer"
+                    class="todo-container"
+                ></div>
 
             </section>
 
-            <section class="todo-detail">
-                <h2>Todo Detail</h2>
-                <label>Title</label>
-                <input type="text" value="Tugas 1 Pemrograman Web">
-                <label>Description</label>
-                <textarea>Create a Todo List Webpage</textarea>
-                <label>Due Date</label>
-                <input type="datetime-local" value="2026-09-14T20:00">
-                <label>Status</label>
 
-                <select>
-                    <option>Pending</option>
-                    <option>In Progress</option>
-                    <option>Done</option>
-                </select>
+            <!-- TASK DETAIL -->
+            <section class="task-detail">
 
-                <button type="button">Save Changes</button>
+                <h2>Task Detail</h2>
+
+                <div
+                    id="emptyDetail"
+                    class="empty-detail"
+                >
+
+                    <div class="detail-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M6 2h9l4 4v16H6z"></path>
+
+                            <polyline points="15,2 15,6 19,6"></polyline>
+
+                            <line
+                                x1="9"
+                                y1="11"
+                                x2="16"
+                                y2="11"
+                            ></line>
+
+                            <line
+                                x1="9"
+                                y1="14"
+                                x2="16"
+                                y2="14"
+                            ></line>
+
+                            <line
+                                x1="9"
+                                y1="17"
+                                x2="14"
+                                y2="17"
+                            ></line>
+
+                        </svg>
+
+                    </div>
+
+                    <p>Select a task to see details</p>
+
+                </div>
+
+                <div
+                    id="detailForm"
+                    class="detail-form hidden"
+                >
+
+                    <label for="editTitle">Title</label>
+
+                    <input
+                        type="text"
+                        id="editTitle"
+                    >
+
+                    <label for="editDescription">Description</label>
+
+                    <textarea id="editDescription"></textarea>
+
+                    <label for="editDueDate">Due Date & Time</label>
+
+                    <input
+                        type="datetime-local"
+                        id="editDueDate"
+                    >
+
+                    <button
+                        type="button"
+                        id="saveButton"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
             </section>
 
         </main>
 
-        <aside>
-            <h2>Create New Todo</h2>
+        <!-- CREATE NEW TASK -->
+        <section class="create-task">
 
-            <form>
-                <label>Title</label>
-                <input type="text">
-                <label>Description</label>
-                <textarea></textarea>
-                <label>Due Date</label>
-                <input type="datetime-local">
-                <button type="submit">Add Todo</button>
+            <h2>Create New Task</h2>
+
+            <form id="todoForm">
+
+                <input
+                    type="text"
+                    id="newTitle"
+                    placeholder="Title"
+                    required
+                >
+
+                <textarea
+                    id="newDescription"
+                    placeholder="Description"
+                    required
+                ></textarea>
+
+                <input
+                    type="datetime-local"
+                    id="newDueDate"
+                    required
+                >
+
+                <button type="submit">Add Task</button>
+
             </form>
-        </aside>
 
-        <footer>
-            <p>[E01a] The Style Warrior</p>
-        </footer>
+        </section>
 
-    </body>
+        <footer>[E02a] The JavaScript Dungeon</footer>
 
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
