@@ -4,14 +4,25 @@ Nama: Zainab Ammar Zahra <br>
 NRP: 5025251172
 
 ## Description
-[E01a] The Style Warrior - Create a Todo List Webpage
+[E02a] The JavaScript Dungeon - Implement DOM Manipulation and make the interaction live on the website
 
 ## Preview
+- Github.io
+  https://if-pemrograman-web-a.github.io/5025251172_Todo-App/
 - Dekstop
-  
-  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/58f77ef8-de50-4b7e-80ec-66f9007bc2d3" />
+  Light:
 
+  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/bab8137b-aacf-4aae-95fb-7b53791810c7" />
+
+  Dark:
+
+  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/ed35248b-1999-4775-b2ab-a47a316daf3f" />
 
 - Mobile
-  
-  <img width="786" height="3328" alt="IMG_5524 JPG" src="https://github.com/user-attachments/assets/303e154d-65b8-44d0-9167-c1b9382d8c3f" />
+  Light:
+
+  <img width="602" height="1600" alt="image" src="https://github.com/user-attachments/assets/70b26564-32c3-498b-b4a7-456648e14427" />
+
+  Dark:
+
+  <img width="602" height="1600" alt="image" src="https://github.com/user-attachments/assets/15c8de7f-f57c-415b-9dda-e80fbdac94b9" />
