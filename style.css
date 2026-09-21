@@ -368,8 +368,9 @@ main {
 /* CREATE TASK */
 .create-task {
     width: 100%;
+    max-width: 1275px;
     min-height: 150px;
-    margin-top: 14px;
+    margin: 14px auto 0;
     padding: 25px 30px;
 }
 
