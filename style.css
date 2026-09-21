@@ -694,11 +694,14 @@ body.dark-mode
 
     /* TODO BUBBLE */
     .todo-item {
-        height: 94px;
-        min-height: 94px;
-        margin-bottom: 8px;
-        padding: 12px 45px 9px 48px;
-        border-radius: 17px;
+    height: 94px;
+    min-height: 94px;
+    margin-bottom: 8px;
+    padding: 0 45px 0 48px;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 
     /* CHECKBOX */
