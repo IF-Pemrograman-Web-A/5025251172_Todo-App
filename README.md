@@ -4,14 +4,26 @@ Nama: Zainab Ammar Zahra <br>
 NRP: 5025251172
 
 ## Description
-[E01a] The Style Warrior - Create a Todo List Webpage
+[E03] The Lost Cavern
 
 ## Preview
-- Dekstop
-  
-  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/58f77ef8-de50-4b7e-80ec-66f9007bc2d3" />
+- GitHub.io <br>
+  https://if-pemrograman-web-a.github.io/5025251172_Todo-App/
+- Dekstop <br>
+  Light: 
 
+  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/624b7cce-43e1-47ef-80a1-7effcff1322f" />
 
-- Mobile
+  Dark:
+
+  <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9e1d23b7-f083-4874-b79d-8c0e40217895" />
+
+- Mobile <br>
+  Light:
   
-  <img width="786" height="3328" alt="IMG_5524 JPG" src="https://github.com/user-attachments/assets/303e154d-65b8-44d0-9167-c1b9382d8c3f" />
+  <img width="492" height="1600" alt="image" src="https://github.com/user-attachments/assets/eb48d9b4-df23-4ce7-ad6c-346704ed2a76" />
+
+  Dark:
+
+  <img width="492" height="1600" alt="image" src="https://github.com/user-attachments/assets/c7155623-22c2-46f6-9307-d54777f52445" />
+
