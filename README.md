@@ -4,7 +4,7 @@ Nama: Zainab Ammar Zahra <br>
 NRP: 5025251172
 
 ## Description
-[E04] The Iron Citadel - Create a Todo List Webpage
+[E04] The Iron Citadel - Todo List with PHP and PostgreSQL
 
 ## Preview
 - Dekstop <br>
