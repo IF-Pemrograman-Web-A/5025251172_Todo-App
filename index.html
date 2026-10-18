@@ -1,82 +1,100 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
     <head>
-        <title>Todo App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Todo List application">
+        <title>Todo List</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
+        <div class="app-shell">
+            <header class="topbar">
+                <h1>Todo List</h1>
+                <button id="themeButton" class="icon-button" type="button" aria-label="Change Theme">☼</button>
+            </header>
 
-        <header>
-            <h1>Todo List</h1>
-        </header>
+            <main class="main-grid">
+                <section class="panel tasks-panel">
+                    <div class="panel-heading">
+                        <h2 id="listHeading">Tasks</h2>
+                        <span id="taskCount">0 tasks</span>
+                    </div>
 
-        <main>
+                    <div id="todoContainer" class="todo-list" aria-live="polite"></div>
+                    <p id="emptyMessage" class="empty-message">No Tasks yet. Add a task below.</p>
+                </section>
 
-            <section class="todo-list">
-                <h2>Tasks</h2>
+                <section class="panel detail-panel">
+                    <h2>Task Detail</h2>
+                    <div id="emptyDetail" class="empty-detail">
+                        <svg class="document-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M12 5h17l9 9v28H12z" />
+                            <path d="M29 5v10h9M18 23h14M18 29h14M18 35h9" />
+                        </svg>
 
-                <div class="todo-item">
-                    <h3>Tugas 1 Pemrograman Web</h3>
-                    <p>Create a Todo List Webpage</p>
-                    <span class="in-progress">In Progress</span>
-                </div>
+                        <p>Select a task to see details</p>
+                    </div>
 
-                <div class="todo-item">
-                    <h3>Tugas 2 KKA</h3>
-                    <p>8-Puzzle</p>
-                    <span class="done">Done</span>
-                </div>
+                    <form id="editForm" class="detail-form hidden">
+                        <label for="editTitle">Title</label>
+                        <input id="editTitle" required maxlength="100">
 
-                <div class="todo-item">
-                    <h3>Tugas 1 Matematika Diskrit</h3>
-                    <p>Book: Discrete Mathematics and Its Applications, Kenneth H Rossen 7th</p>
-                    <span class="pending">Pending</span>
-                </div>
+                        <label for="editDescription">Description</label>
+                        <textarea id="editDescription" rows="3"></textarea>
 
-            </section>
+                        <label for="editDueDate">Due Date</label>
+                        <input id="editDueDate" type="datetime-local">
 
-            <section class="todo-detail">
-                <h2>Todo Detail</h2>
-                <label>Title</label>
-                <input type="text" value="Tugas 1 Pemrograman Web">
-                <label>Description</label>
-                <textarea>Create a Todo List Webpage</textarea>
-                <label>Due Date</label>
-                <input type="datetime-local" value="2026-09-14T20:00">
-                <label>Status</label>
+                        <details class="extra-options">
+                            <summary>Reminder and task options</summary>
+                            <label for="editNotificationTime">Notification Time</label>
+                            <input id="editNotificationTime" type="datetime-local">
+                        </details>
 
-                <select>
-                    <option>Pending</option>
-                    <option>In Progress</option>
-                    <option>Done</option>
-                </select>
+                        <button class="primary-button" type="submit">Save Changes</button>
+                    </form>
+                </section>
 
-                <button type="button">Save Changes</button>
-            </section>
+                <section class="panel create-panel">
+                    <h2>Create New Task</h2>
+                    <form id="todoForm" class="create-form">
+                        <label class="sr-only" for="newTitle">Title</label>
+                        <input id="newTitle" required maxlength="100" placeholder="Title">
 
-        </main>
+                        <label class="sr-only" for="newDescription">Description</label>
+                        <input id="newDescription" placeholder="Description">
 
-        <aside>
-            <h2>Create New Todo</h2>
+                        <label class="sr-only" for="newDueDate">Due Date</label>
+                        <input id="newDueDate" type="datetime-local">
 
-            <form>
-                <label>Title</label>
-                <input type="text">
-                <label>Description</label>
-                <textarea></textarea>
-                <label>Due Date</label>
-                <input type="datetime-local">
-                <button type="submit">Add Todo</button>
-            </form>
-        </aside>
+                        <button class="primary-button add-button" type="submit">Add Task</button>
 
-        <footer>
-            <p>[E01a] The Style Warrior</p>
-        </footer>
+                        <details class="extra-options create-extra">
+                            <summary>Reminder and image options</summary>
+                            <label for="newNotificationTime">Notification Time</label>
+                            <input id="newNotificationTime" type="datetime-local">
 
+                            <div class="image-tools">
+                                <label class="file-button">Add Image
+                                    <input id="imageInput" type="file" accept="image/*" hidden>
+                                </label>
+
+                                <button id="startCameraButton" type="button" class="secondary-button">Open Camera</button>
+                                <button id="captureButton" type="button" class="secondary-button" disabled>Capture Image</button>
+                            </div>
+                        </details>
+
+                        <video id="cameraPreview" class="camera-preview hidden" autoplay playsinline></video>
+                        <img id="imagePreview" class="image-preview hidden" alt="Preview of task image">
+                    </form>
+                </section>
+            </main>
+
+            <footer>[E04] The Iron Citadel</footer>
+        </div>
+
+        <script src="script.js"></script>
     </body>
-
 </html>
