@@ -6,6 +6,12 @@ NRP: 5025251172
 ## Description
 [E04] The Iron Citadel - Todo List with PHP and PostgreSQL
 
+## Database PostgreSQL
+Tabel `task`
+
+<img width="1564" height="232" alt="image" src="https://github.com/user-attachments/assets/2ea8934d-4c8c-4f39-8594-81a9b2e20210" />
+
+
 ## Preview
 - Dekstop <br>
   Light:
