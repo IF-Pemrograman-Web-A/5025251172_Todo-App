@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c63ff">
+    <meta name="description" content="Todo App offline page">
+
+    <title>You're Offline | Todo App</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f5f5ff;
+            color: #333;
+            text-align: center;
+        }
+
+        .offline-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 28px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .offline-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            background: #6c63ff;
+            color: #ffffff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #574fe0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="offline-container">
+        <div class="offline-icon">📡</div>
+
+        <h1>You're Offline</h1>
+
+        <p>
+            Please check your connection and try again.
+        </p>
+
+        <button onclick="window.location.reload()">
+            Try Again
+        </button>
+    </main>
+</body>
+</html>
