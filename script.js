@@ -185,31 +185,38 @@ const installButton = document.querySelector("#installButton");
 
 let deferredInstallPrompt = null;
 
+// True when the page is running as an installed app (no browser address bar).
+const isInstalledApp =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
 if (installButton) {
     installButton.hidden = true;
 
-    window.addEventListener("beforeinstallprompt", event => {
-        event.preventDefault();
+    if (!isInstalledApp) {
+        window.addEventListener("beforeinstallprompt", event => {
+            event.preventDefault();
 
-        deferredInstallPrompt = event;
-        installButton.hidden = false;
-    });
+            deferredInstallPrompt = event;
+            installButton.hidden = false;
+        });
 
-    installButton.addEventListener("click", async () => {
-        if (!deferredInstallPrompt) {
-            return;
-        }
+        installButton.addEventListener("click", async () => {
+            if (!deferredInstallPrompt) {
+                return;
+            }
 
-        deferredInstallPrompt.prompt();
+            deferredInstallPrompt.prompt();
 
-        const choice = await deferredInstallPrompt.userChoice;
+            const choice = await deferredInstallPrompt.userChoice;
 
-        if (choice.outcome === "accepted") {
-            installButton.hidden = true;
-        }
+            if (choice.outcome === "accepted") {
+                installButton.hidden = true;
+            }
 
-        deferredInstallPrompt = null;
-    });
+            deferredInstallPrompt = null;
+        });
+    }
 
     window.addEventListener("appinstalled", () => {
         installButton.hidden = true;
