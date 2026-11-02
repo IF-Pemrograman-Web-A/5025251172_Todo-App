@@ -1,4 +1,4 @@
-const CACHE_NAME = "todo-app-v3";
+const CACHE_NAME = "todo-app-v5";
 
 const STATIC_FILES = [
     "./style.css",
